@@ -5,15 +5,15 @@ import { shopConfig } from '../config';
 export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background Video with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/images/image20.jpg"
-          alt="Barbershop Background"
-          className="w-full h-full object-cover opacity-40"
-          style={{
-            animation: 'zoom 18s ease-in-out infinite'
-          }}
+        <video
+          src="/images/video1.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black"></div>
       </div>

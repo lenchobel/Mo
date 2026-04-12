@@ -81,7 +81,7 @@ export const shopConfig = {
     {
       name: "Nati",
       specialty: "Master Barber & Fade Expert",
-      image: "/images/image10.jpg",
+      image: "/images/image27.jpg",
     },
     {
       name: "Siyoom",
@@ -91,22 +91,22 @@ export const shopConfig = {
     {
       name: "",
       specialty: "Modern Styling & Texture",
-      image: "/images/image2.jpg",
+      image: "/images/image29.jpg",
     },
   ],
   gallery: [
-    "/images/image1.jpg",
-    "/images/image2.jpg",
+    "/images/image31.jpg",
+    "/images/image30.jpg",
     "/images/image3.jpg",
-    "/images/image4.jpg",
+    "/images/image25.jpg",
     "/images/image5.jpg",
-    "/images/image6.jpg",
-    "/images/image7.jpg",
+    "/images/image26.jpg",
+    "/images/image21.jpg",
     "/images/image8.jpg",
     "/images/image9.jpg",
-    "/images/image10.jpg",
+    "/images/image19.jpg",
     "/images/image11.jpg",
-    "/images/image12.jpg",
+    "/images/image20.jpg",
   ],
   testimonials: [
     {

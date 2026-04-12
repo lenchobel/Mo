@@ -1,7 +1,10 @@
-import { motion } from 'motion/react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { shopConfig } from '../config';
 
 export default function Services() {
+  const [showAllServices, setShowAllServices] = useState(false);
+  const displayedServices = showAllServices ? shopConfig.services : shopConfig.services.slice(0, 4);
   return (
     <section id="services" className="py-24 px-6 bg-[#050505]">
       <div className="max-w-7xl mx-auto">
@@ -16,7 +19,8 @@ export default function Services() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-          {shopConfig.services.map((service, index) => (
+          <AnimatePresence mode="wait">
+            {displayedServices.map((service, index) => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
@@ -40,17 +44,18 @@ export default function Services() {
                 <span>Includes Hot Towel</span>
               </div>
             </motion.div>
-          ))}
+            ))}
+          </AnimatePresence>
         </div>
 
         <div className="mt-16 text-center">
           <p className="text-white/40 text-sm uppercase tracking-widest mb-8">Need something custom? Just ask your barber.</p>
-          <a
-            href="#booking"
+          <button
+            onClick={() => setShowAllServices(!showAllServices)}
             className="inline-block border-b-2 border-accent pb-1 text-accent font-bold uppercase tracking-widest hover:text-white hover:border-white transition-all"
           >
-            View Full Price List
-          </a>
+            {showAllServices ? 'Show Less Services' : 'View Full Price List'}
+          </button>
         </div>
       </div>
     </section>
